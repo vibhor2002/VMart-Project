@@ -1,3 +1,5 @@
+// Deployed on Vercel https://v-mart-project.vercel.app/
+
 import Head from "next/head";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
