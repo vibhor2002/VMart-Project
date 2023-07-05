@@ -1,6 +1,6 @@
 import React from 'react'
-import vmart from '../pic/vmart.png'
-// import Image from "next/image";
+import vmart from '../../public/vmart.png'
+import Image from "next/image";
 import {
   MenuIcon,
   SearchIcon,
@@ -14,23 +14,13 @@ function Header() {
       {/* Top Nav */}
       <div className='flex items-center bg-vmart_blue flex-grow py-2'>
         <div className='mx-4 mt-2 flex items-center flex-grow sm:flex-grow-0'>
-          <img
+          <Image
             src={vmart}
-            alt=""
-            style={{
-              width: '150px',
-              height: '40px',
-              cursor: 'pointer',
-              objectFit: 'contain',
-            }}
-          />
-          {/* <Image
-            src='https://links.papareact.com/f90'
             width={150}
             height={40}
             style={{ objectFit: 'contain' }}            
             className='cursor-pointer'
-          /> */}
+          />
         </div>
 
         {/* Search */}
@@ -67,9 +57,11 @@ function Header() {
           <MenuIcon className='h-6 mr-1' />
           All
         </p>
-        <p className='link '>Prime Video</p>
         <p className='link '>VMart Business</p>
         <p className='link '>Today' Deals</p>
+        <p className='link '>Appliances</p>
+        <p className='link hidden lg:inline-flex'>Books</p>
+        <p className='link hidden lg:inline-flex'>Kids Toys</p>
         <p className='link hidden lg:inline-flex'>Electronics</p>
         <p className='link hidden lg:inline-flex'>Food & Grocery</p>
         <p className='link hidden lg:inline-flex'>Prime</p>

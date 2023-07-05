@@ -15,15 +15,15 @@ function Banner() {
             interval={5000}
         >
             <div>
-                <img loading='lazy' src="https://links.papareact.com/gi1" alt="" />
+                <img loading='lazy' src="https://marketplace.canva.com/EAFGKRRskMs/1/0/1600w/canva-brown-and-beige-minimalist-fashion-banner-lYcbGpUSVGo.jpg" alt="" />
+            </div>
+            
+            <div>
+                <img loading='lazy' src="https://i.pinimg.com/originals/f0/f9/e4/f0f9e45724771f16745ad3f6f640d3ce.jpg" alt="" />
             </div>
 
             <div>
-                <img loading='lazy' src="https://links.papareact.com/6ff" alt="" />
-            </div>
-
-            <div>
-                <img loading='lazy' src="https://links.papareact.com/7ma" alt="" />
+                <img loading='lazy' src="https://www.hp.com/us-en/shop/app/assets/images/uploads/prod/ecommerce-vs-online-marketplace1603983748724190.jpg" alt="" />
             </div>
         </Carousel>
     </div>
