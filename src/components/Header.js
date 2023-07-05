@@ -1,10 +1,12 @@
 import React from 'react'
-import Image from "next/image";
+import vmart from '../pic/vmart.png'
+// import Image from "next/image";
 import {
   MenuIcon,
   SearchIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline"
+
 
 function Header() {
   return (
@@ -12,13 +14,23 @@ function Header() {
       {/* Top Nav */}
       <div className='flex items-center bg-vmart_blue flex-grow py-2'>
         <div className='mx-4 mt-2 flex items-center flex-grow sm:flex-grow-0'>
-          <Image
+          <img
+            src={vmart}
+            alt=""
+            style={{
+              width: '150px',
+              height: '40px',
+              cursor: 'pointer',
+              objectFit: 'contain',
+            }}
+          />
+          {/* <Image
             src='https://links.papareact.com/f90'
             width={150}
             height={40}
             style={{ objectFit: 'contain' }}            
             className='cursor-pointer'
-          />
+          /> */}
         </div>
 
         {/* Search */}
@@ -52,7 +64,7 @@ function Header() {
       {/* Bottom Nav */}
       <div className='flex items-center space-x-3 p-2 pl-6 bg-vmart_blue-light text-white text-sm'>
         <p className='flex items-center link'>
-          <MenuIcon className='h-6 mr-1'/>
+          <MenuIcon className='h-6 mr-1' />
           All
         </p>
         <p className='link '>Prime Video</p>
