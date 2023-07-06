@@ -40,9 +40,9 @@ function Product({ id, title, price, description, category, image }) {
                 <Currency
                     className="mb-5"
                     quantity={price}
-                    currency="INR"
+                    currency="USD"
                 />
-            </div>
+            </div> 
 
             {hasPrime && (
                 <div className="flex items-center space-x-2 mt-2">
