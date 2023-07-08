@@ -24,9 +24,11 @@ function Product({ id, title, price, description, category, image }) {
             id,
             title,
             price,
+            rating,
             description,
             category,
-            image
+            image,
+            hasPrime
          };
 
         // Sending the prosuct as an action to the REDUX store
