@@ -53,11 +53,11 @@ function Checkout() {
         </div>
 
         {/* Right */}
-        <div className='flex flex-col bg-white p-10 shadow-md'>
+        <div className={items.length === 0 ? '' : 'flex flex-col bg-white p-10 shadow-md'}>
           {items.length > 0 && (
             <>
               <h2 className='whitespace-nowrap'>
-                Subtotal ({items.length} items): &nbsp; 
+                Subtotal ({items.length} items): {" "} 
                 <span className='font-bold'>
                   <Currency className="mb-5" quantity={total} currency="USD" />
                 </span>
