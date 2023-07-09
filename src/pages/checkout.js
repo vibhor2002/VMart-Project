@@ -3,7 +3,7 @@ import Header from '../components/Header'
 import Image from 'next/image'
 import banner from '../../public/ban.png'
 import { useSelector } from 'react-redux'
-import { selectItems } from '../slices/basketSlice'
+import { selectItems, selectTotal } from '../slices/basketSlice'
 import CheckoutProduct from '../components/CheckoutProduct'
 import Currency from 'react-currency-formatter';
 import { useSession } from 'next-auth/client'
@@ -11,6 +11,7 @@ import { useSession } from 'next-auth/client'
 function Checkout() {
   const items = useSelector(selectItems);
   const [session] = useSession();
+  const total = useSelector(selectTotal);
 
   return (
     <div className='bg-gray-100'>
@@ -56,9 +57,9 @@ function Checkout() {
           {items.length > 0 && (
             <>
               <h2 className='whitespace-nowrap'>
-                Subtotal ({items.length} items) :
+                Subtotal ({items.length} items): &nbsp; 
                 <span className='font-bold'>
-                  {/* <Currency className="mb-5" quantity={total} currency="USD" /> */}
+                  <Currency className="mb-5" quantity={total} currency="USD" />
                 </span>
               </h2>
 
