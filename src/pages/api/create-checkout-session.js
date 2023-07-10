@@ -8,12 +8,6 @@ export default async (req, res) => {
       return res.status(400).json({ error: "Invalid items or price" })
    }
    
-//    // Validate the price
-//    if (isNaN(item.price) || price <= 0) {
-//       return res.status(400).json({ error: "Invalid price" })
-//    }
-
-   // Create a line item for each item
    const lineItems = items.map((item) => ({
       quantity: 1,
       price_data: {

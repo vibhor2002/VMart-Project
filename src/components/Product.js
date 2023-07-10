@@ -4,6 +4,9 @@ import { StarIcon } from '@heroicons/react/solid';
 import Currency from 'react-currency-formatter';
 import { useDispatch } from "react-redux"; 
 import { addToBasket } from "../slices/basketSlice";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const MAX_RATING = 5;
@@ -33,6 +36,10 @@ function Product({ id, title, price, description, category, image }) {
 
         // Sending the prosuct as an action to the REDUX store
          dispatch(addToBasket(product))
+
+        toast.success('Product added to basket!', {
+            position: toast.POSITION.BOTTOM_RIGHT,
+        });
     }
 
     return (
@@ -72,6 +79,7 @@ function Product({ id, title, price, description, category, image }) {
             )}
 
             <button onClick={addItemtoBasket} className="mt-auto button">Add to Basket</button>
+            <ToastContainer />
         </div>
     )
 }
